@@ -2,8 +2,11 @@
 ○	Пример вывода: 
 Первый вывод:
 {"part1": "ARuOdq0eofZzYdvvDWkdw3bx2M+jLib/8abO/sTIMrJsM+pD7fvbcu0WLKKtFCgNwDz7eiEGERJ0FVIX/1q5NfJPcBuExyN8A7BF2KDJpi9vEIPvXGeYQAuhvm6AwAF3LzLnmR70kQB+nqfq4r6Zgz5tV46peWx6hZkvaWyd0HEq"}
+
 Второй вывод:
+
 {"part2":"4C4PUE0jCjSAfcT5BQ8YX+sB4cD98pVPwUomwPttCgZ6/v7uT3v0ispnlHSL6ZQ2OouFQm7Up5YL/dBt6ywxl3Z8RMYNv8CqKhA5J8LJDBEq/5M7p7Ua6ugKRmVki9ic4Jz9Yy6KLdcwbCVIxgQmmFcuuP/RHBn3ccxfYqUqKg=="}
+
 Последний вывод — отправленное "msg" :
 Hello!
 
@@ -41,10 +44,6 @@ PHP-расширение curl включено (ext-curl)
 
 Доступ в сеть для обращения к https://test.icorp.uz/private/interview.php
 
-/project
-  ├─ index.php        <-- ваш объединённый скрипт (client + callback)
-  ├─ json.txt         <-- создаётся автоматически при callback (или вручную)
-  └─ README.md
 
 
 
