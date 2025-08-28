@@ -59,7 +59,7 @@ PHP-расширение curl включено (ext-curl)
 
 Если вы используете встроенный сервер PHP:
 
-cd /path/to/project
+cd /path/project
 php -S 127.0.0.1:8000
 
 
