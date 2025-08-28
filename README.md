@@ -1,6 +1,8 @@
 # Api
-○	Пример вывода: 
+○	Пример вывода
+ 
 Первый вывод:
+
 {"part1": "ARuOdq0eofZzYdvvDWkdw3bx2M+jLib/8abO/sTIMrJsM+pD7fvbcu0WLKKtFCgNwDz7eiEGERJ0FVIX/1q5NfJPcBuExyN8A7BF2KDJpi9vEIPvXGeYQAuhvm6AwAF3LzLnmR70kQB+nqfq4r6Zgz5tV46peWx6hZkvaWyd0HEq"}
 
 Второй вывод:
