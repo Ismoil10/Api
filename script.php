@@ -58,7 +58,7 @@ class ClientUrl
     {
         //Первый запрос к API
         $response = $this->postJson($this->endpoint, [
-            'uri' => "<<NGROK_DOMAIN>>/script.php",
+            'uri' => "<<NGROK_DOMAIN>>/script/script.php",
             'msg' => "Hello!"
         ]);
 
