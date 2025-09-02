@@ -62,35 +62,9 @@ PHP-расширение curl включено (ext-curl)
 cd /path/project
 php -S 127.0.0.1:8000
 
-
 Если проект доступен через XAMPP/Apache — разместите index.php в документ-руте (например, htdocs/interview/index.php).
 
-2) Запустите ngrok, чтобы получить публичный URL
-
-Если сервер слушает порт 8000:
-
-ngrok http 8000
-
-
-После запуска ngrok вы получите публичный HTTPS URL, например:
-
-https://abcd1234.ngrok-free.app
-
-3) Сформируйте callback URL и вставьте в скрипт
-
-В index.php найдите место, где задаётся uri (пример в коде):
-
-'uri' => "https://f38fb25de8cc.ngrok-free.app/script/script.php",
-
-
-Замените на ваш public ngrok URL + путь к файлу, например:
-
-https://abcd1234.ngrok-free.app/index.php
-
-
-Важно: URL должен указывать на тот же файл, который принимает POST (т. е. index.php), если вы используете объединённый файл.
-
-4) Запустите client-часть
+2) Запустите client-часть
 
 Есть два варианта:
 
@@ -101,9 +75,9 @@ php index.php
 
 Через браузер (если скрипт настроен на это): откройте https://127.0.0.1:8000/index.php?run=1 или просто ?run=1, если в коде предусмотрен параметр.
 
-При запуске клиент отправит первый POST на https://test.icorp.uz/private/interview.php, передав ваше uri. Сервер в ответ должен вернуть JSON с part1 и (в идеале) сам вызовет ваш callback (POST на ваш ngrok URL) с part2.
+При запуске клиент отправит первый POST на https://test.icorp.uz/private/interview.php, передав ваше uri. Сервер в ответ должен вернуть JSON с part1 и (в идеале) сам вызовет ваш callback с part2.
 
-5) Убедитесь, что callback сработал
+3) Убедитесь, что callback сработал
 
 После входящего webhook’а в папке проекта должен появиться (или обновиться) файл json.txt.
 
@@ -111,10 +85,7 @@ php index.php
 
 { "part2": "..." }
 
-
-Если json.txt отсутствует — проверьте ngrok лог/console, серверные логи и доступность публичного URL.
-
-6) Скрипт завершает работу
+4) Скрипт завершает работу
 
 Если part2 найден в json.txt, скрипт объединяет part1 + part2 и делает финальный POST {"code": "<concatenated>"}
 
