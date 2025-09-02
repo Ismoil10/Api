@@ -55,7 +55,7 @@ PHP-расширение curl включено (ext-curl)
 
 Если вы используете встроенный сервер PHP:
 
-cd /path/to/project
+cd /script
 php -S 127.0.0.1:8000
 
 
@@ -93,9 +93,6 @@ https://abcd1234.ngrok-free.app/index.php
 CLI:
 
 php index.php
-
-
-Через браузер (если скрипт настроен на это): откройте https://127.0.0.1:8000/index.php?run=1 или просто ?run=1, если в коде предусмотрен параметр.
 
 При запуске клиент отправит первый POST на https://test.icorp.uz/private/interview.php, передав ваше uri. Сервер в ответ должен вернуть JSON с part1 и (в идеале) сам вызовет ваш callback (POST на ваш ngrok URL) с part2.
 
